@@ -1,0 +1,12 @@
+
+# Sets.Task__1
+
+if __name__ == '__main__':
+    N = int(input())
+    set1 = set(map(int, input().split()))
+    M = int(input())
+    set2 = set(map(int, input().split()))
+    whole_set = set1.symmetric_difference(set2) | set2.symmetric_difference(set1)
+    print(whole_set)
+    for i in whole_set:
+        print(i)	

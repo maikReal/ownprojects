@@ -1,0 +1,63 @@
+# The first exercises
+
+if __name__ == '__main__':
+    N = int(input())
+    list_num = []
+
+    for x in range(N):
+        operation = input()
+        operation = operation.split()
+        command = operation[0]
+        if command == 'insert':
+            place = int(operation[1])
+            value = int(operation[2])
+            list_num.insert(place, value)
+        if command == 'print':
+            print(list_num)
+        if command == 'append':
+            value = int(operation[1])
+            list_num.append(value)
+        if command == 'remove':
+            number = int(operation[1])
+            list_num.remove(number)
+        if command == 'sort':
+            list_num.sort()
+        if command == 'reverse':
+            list_num.reverse()
+        if command == 'pop':
+            list_num.pop()
+
+
+# The second one
+
+if __name__ == '__main__':
+    n = int(input())
+    integer_list = map(int, input().split())
+    num_tuple = tuple(integer_list)
+        if len(num_tuple) == n:
+    	    print(hash(num_tuple))
+
+# The third one
+
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    print([[ i, j, k ] for i in range(x + 1) for j in range(y + 1) for k in range(z + 1) if ((i + j + k) != n)])
+
+# The fourth one
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    new_arr = list(arr)
+
+    if len(new_arr) == n:
+        dic = {new_arr[i]: i for i in range(n)}
+        print(dic)
+        values = list(dic.keys())
+        max_num = values.index(max(values))
+        values.pop(max_num)
+        print(max(values))
+	

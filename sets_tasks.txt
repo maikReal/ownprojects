@@ -1,4 +1,4 @@
-# Sets.Task_1
+# Sets.Task__1
 
 if __name__ == '__main__':
     N = int(input())

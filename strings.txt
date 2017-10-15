@@ -1,0 +1,27 @@
+# Task about swapcase. Diceded to do with the help of generator))
+# Знаю, что можно через метод swapcase(), но не стал так делать)
+
+def generator(s):
+    i = 0
+    while i < len(s):
+        yield i
+        i += 1
+
+
+if __name__ == '__main__':
+    s = input('Input the string: ')
+    for x in generator(s):
+        if s[x].islower():
+            print(s[x].upper(), end='')
+        else:
+            print(s[x].lower(), end='')
+
+import re
+# Найти число вхождений введеного шаблона в строку
+
+if __name__ == '__main__':
+    st = input()
+    subst = input()
+
+    consists = re.findall(subst, st)
+    print(len(consists))

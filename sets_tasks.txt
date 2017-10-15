@@ -10,3 +10,49 @@ if __name__ == '__main__':
     print(whole_set)
     for i in whole_set:
         print(i)	
+
+
+
+# Задание из университета про множества. С рандомными чсилами из двух файлов сделать различные операции
+
+import random
+
+def generator(num):
+    i = 1
+    while i < num + 1:
+        yield i
+        i += 1
+
+if __name__ == '__main__':
+    f1 = open(r'numbers1', 'w+')
+    f2 = open(r'numbers2', 'w+')
+
+    lst1 = [i for i in generator(100)]
+    random.shuffle(lst1)
+    
+    i = 0
+    while i != 50:
+        ran_num = str(lst1[i])
+        f1.write(ran_num + ',')
+        i += 1
+
+    lst2 = [i for i in generator(100)]
+    random.shuffle(lst2)
+    
+    i = 0
+    while i != 50:
+        ran_num = str(lst2[i])
+        f2.write(ran_num + ',')
+        i += 1
+
+    f2 = open(r'numbers2')
+    s2 = set(f2.read().split(','))    
+
+    f1 = open(r'numbers1')
+    s1 = set(f1.read().split(','))
+
+    print('In first file and second one: ', s1 & s2)
+    print('In first file without repeat: ', s1)
+    print('In second file without repeat: ', s2)
+    print('In first, but not in second: ', s1 - s2)
+    print('In second, but not in first: ', s2 - s1)

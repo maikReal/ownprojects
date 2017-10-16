@@ -1,23 +1,20 @@
 # Task about swapcase. Diceded to do with the help of generator))
-# Знаю, что можно через метод swapcase(), но не стал так делать)
-
-def generator(s):
-    i = 0
-    while i < len(s):
-        yield i
-        i += 1
-
 
 if __name__ == '__main__':
-    s = input('Input the string: ')
-    for x in generator(s):
-        if s[x].islower():
-            print(s[x].upper(), end='')
+    st = input()
+
+    st_list = []
+    for letter in st:
+        if letter.isupper():
+            st_list.append(letter.lower())
         else:
-            print(s[x].lower(), end='')
+            st_list.append(letter.upper())
+
+    st = ''.join(st_list)
+    print(st)
 
 import re
-# Найти число вхождений введеного шаблона в строку
+# Find the number of occurence of template
 
 if __name__ == '__main__':
     st = input()
@@ -25,3 +22,10 @@ if __name__ == '__main__':
 
     consists = re.findall(subst, st)
     print(len(consists))
+
+# Change the letter in the string
+if __name__ == '__main__':
+    st = input('Input the string: ')
+    ind, *el = input().split()
+    el = ''.join(el)
+    print(st[:int(ind)] + el + st[int(ind) + 1:])

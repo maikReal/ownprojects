@@ -13,7 +13,8 @@ if __name__ == '__main__':
 
 
 
-# Задание из университета про множества. С рандомными чсилами из двух файлов сделать различные операции
+# Task_2.
+# Task from uni about sets. We should make some operations with random numbers from two files.
 
 import random
 
@@ -56,3 +57,17 @@ if __name__ == '__main__':
     print('In second file without repeat: ', s2)
     print('In first, but not in second: ', s1 - s2)
     print('In second, but not in first: ', s2 - s1)
+
+
+# Task_3 from Hackerrank
+
+if __name__ == '__main__':
+    n = int(input())
+    countries = set()
+    i = 0
+
+    while i < n:
+        country = input()
+        countries.add(country)
+        i += 1
+    print(len(countries))

@@ -1,6 +1,6 @@
 import random 
 
-# Guess the number
+# "Guess the number"
 
 if __name__ == '__main__':
 

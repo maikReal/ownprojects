@@ -1,10 +1,56 @@
-
-# Sets.Task__1
+# Sets. "Set .union() operation"
 
 if __name__ == '__main__':
     N = int(input())
-    set1 = set(map(int, input().split()))
+    students = set(map(int, input().split()))
+
     M = int(input())
+    students2 = set(map(int, input().split()))
+
+    if len(students) == N and len(students2) == M:   # I did with the check, but on hackerrank it was wrong
+        un = students.union(students2)
+        print(len(un))
+
+
+# Sets. "Set .discard(), .remove(), .pop()"
+
+if __name__ == '__main__':
+    N = int(input())
+    set_num = set(map(int, input().split()))
+
+    if len(set_num) == N:
+
+        commands = int(input())
+
+        for i in range(commands):
+            operation = input().split()
+            command = operation[0]
+            if command == 'remove':
+                num = int(operation[1])
+                set_num.remove(num)
+            if command == 'discard':
+                num = int(operation[1])
+                set_num.discard(num)
+            if command == 'pop':
+                set_num.pop()
+        print(sum(set_num))
+
+
+# There is a truoble in the task "Introduction to sets"
+# I decided to realise this code by myself
+
+if __name__ == '__main__':
+    n = int(input())
+    set1 = set(map(int, input().split()))
+
+    res = sum(set1)
+    print(res/n)
+
+# Sets."Symmetric Difference"
+
+if __name__ == '__main__':
+    
+    set1 = set(map(int, input().split()))
     set2 = set(map(int, input().split()))
     whole_set = set1.symmetric_difference(set2) | set2.symmetric_difference(set1)
     print(whole_set)
@@ -59,15 +105,14 @@ if __name__ == '__main__':
     print('In second, but not in first: ', s2 - s1)
 
 
-# Task_3 from Hackerrank
+# Sets. "Set .add()"
 
 if __name__ == '__main__':
     n = int(input())
     countries = set()
     i = 0
-
-    while i < n:
+	
+    for i in range(n):
         country = input()
         countries.add(country)
-        i += 1
     print(len(countries))

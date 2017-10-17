@@ -1,0 +1,13 @@
+# Build-ins. "Zipped!"
+
+if __name__ == '__main__':
+    num_stud, *sbj = input().split()
+    sbj = int(sbj[0])
+    marks = []
+    for i in range(sbj):
+        marks.append(input().split())
+
+    average_mark = tuple(zip(*marks))
+    for i in average_mark:
+        summary = sum(map(float, i))
+        print(summary/sbj)

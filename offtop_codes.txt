@@ -1,0 +1,87 @@
+import random 
+
+# Guess the number
+
+if __name__ == '__main__':
+
+    number = random.randint(1, 10000)
+    print('Make a guess my number!')
+    counter = 0
+    i = None
+    while number != i:
+        i = int(input('Input suggestion number: '))
+        if i > number:
+            counter += 1
+            print('No, it\'s so big' )
+        if i < number:
+            counter += 1
+            print('No, it\'s so little')
+
+    print('Great job! The number is', i)
+    print('Your tries:', counter)
+
+# The game. Stone, paper and scissors.
+
+if __name__ == '__main__':
+    
+    answear = input('Do u wanna play?(Y/N)')
+    if answear == 'Y':
+        i = None
+        while i != 'exit':
+            counter = 0
+            if i == 'exit':
+                break
+            comp_answear = random.choice(['stone', 'scissors', 'paper'])
+            i = input('Your turn: ')
+            print(comp_answear)
+
+            if comp_answear.endswith('one') and i == 'paper':
+                counter += 1
+            if comp_answear.endswith('one') and i == 'scissors':
+                counter -= 1
+            if comp_answear == 'stone':
+                counter += 0
+
+            if comp_answear.endswith('ors') and i == 'paper':
+                counter -= 1
+            if comp_answear.endswith('ors') and i == 'scissors':
+                counter += 0
+            if comp_answear.endswith('ors') and i == 'stone':
+                counter +=1
+
+            if comp_answear.endswith('per') and i == 'paper':
+                counter += 0
+            if comp_answear.endswith('per') and i == 'scissors':
+                counter += 1
+            if comp_answear.endswith('per') and i == 'stone':
+                counter -= 1
+
+            print(counter)
+
+
+
+    else:
+        print('Ok, see u soon')
+
+
+# Prime numbers till n element
+
+def generator(num):
+    i = 2
+    while i < num + 1:
+        yield i
+        i += 1
+
+if __name__ == '__main__':
+
+    n = int(input('Input the number: '))
+
+    lst = []
+
+    for i in generator(n+1):
+        for j in lst:
+            if i % j == 0:
+                break
+        else:
+            lst.append(i)
+    print(lst)

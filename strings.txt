@@ -1,0 +1,31 @@
+# Task about swapcase. Diceded to do with the help of generator))
+
+if __name__ == '__main__':
+    st = input()
+
+    st_list = []
+    for letter in st:
+        if letter.isupper():
+            st_list.append(letter.lower())
+        else:
+            st_list.append(letter.upper())
+
+    st = ''.join(st_list)
+    print(st)
+
+import re
+# Find the number of occurence of template
+
+if __name__ == '__main__':
+    st = input()
+    subst = input()
+
+    consists = re.findall(subst, st)
+    print(len(consists))
+
+# Change the letter in the string
+if __name__ == '__main__':
+    st = input('Input the string: ')
+    ind, *el = input().split()
+    el = ''.join(el)
+    print(st[:int(ind)] + el + st[int(ind) + 1:])

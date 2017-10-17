@@ -61,7 +61,7 @@ if __name__ == '__main__':
         values.pop(max_num)
         print(max(values))
 
-# The sixth one 
+# The sixth one
 
 if __name__ == '__main__':
     n = int(input())
@@ -75,4 +75,3 @@ if __name__ == '__main__':
         if query_name == key:
             mark = sum(student_marks.get(key))/3
             print("{0:.2f}".format(mark))
-

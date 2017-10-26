@@ -1,3 +1,41 @@
+# http://pythontutor.ru/lessons/str/problems/delete_chunk/
+# Strings. "Delete chunk"
+
+if __name__ == '__main__':
+    s = input()
+
+    print(s[:s.find('h')] + s[s.rfind('h')+1:])
+
+# http://pythontutor.ru/lessons/str/problems/second_occurence/
+# Strings. "Second occurence"
+
+if __name__ == '__main__':
+    s = input()
+    counter = 0
+    for i in range(len(s)):
+        if s[i] == 'f':
+            counter += 1
+        if counter == 2:
+            print('f', i)
+            break
+    if counter == 1:
+        print('-1')
+    if counter == 0:
+        print('-2')
+
+# http://pythontutor.ru/lessons/str/problems/first_and_last_occurences/
+# Strings. "First and last occurences"
+
+if __name__ == '__main__':
+    s = input()
+    res = s.count('f')
+    if res > 1:
+        print(s.find('f'))
+        print(s.rfind('f'))
+    if res == 1:
+        print(s.find('f'))
+
+
 # Task about swapcase. Diceded to do with the help of generator))
 
 if __name__ == '__main__':

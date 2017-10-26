@@ -47,31 +47,25 @@ if __name__ == '__main__':
     print([[ i, j, k ] for i in range(x + 1) for j in range(y + 1) for k in range(z + 1) if ((i + j + k) != n)])
 
 # The fourth one
+# I've made this code better)))
 
 if __name__ == '__main__':
     n = int(input())
     arr = map(int, input().split())
-    new_arr = list(arr)
-
-    if len(new_arr) == n:
-        dic = {new_arr[i]: i for i in range(n)}
-        print(dic)
-        values = list(dic.keys())
-        max_num = values.index(max(values))
-        values.pop(max_num)
-        print(max(values))
+    set1 = set(arr)
+    print(sorted(set1)[len(set1)-2])
 
 # The sixth one
+# I've fixed this code too, now it's simplier
 
 if __name__ == '__main__':
     n = int(input())
     student_marks = {}
+
     for _ in range(n):
-        name, *line = input().split()
-        scores = list(map(float, line))
-        student_marks[name] = scores
+        name, *marks = input().split()
+        student_marks[name] = marks
     query_name = input()
-    for key in student_marks:
-        if query_name == key:
-            mark = sum(student_marks.get(key))/3
-            print("{0:.2f}".format(mark))
+
+    st_marks = list(map(float, student_marks[query_name]))
+    print('{0:.2f}'.format(sum(st_marks)/len(st_marks)))

@@ -36,15 +36,15 @@ if __name__ == '__main__':
         print(sum(set_num))
 
 
-# There is a truoble in the task "Introduction to sets"
-# I decided to realise this code by myself
+# Sets. "Introduction to Sets"
+# I've fixed the code))
 
 if __name__ == '__main__':
     n = int(input())
-    set1 = set(map(int, input().split()))
+    set1 = set(map(float, input().split()))
 
     res = sum(set1)
-    print(res/n)
+    print(res/len(set1))
 
 # Sets."Symmetric Difference"
 

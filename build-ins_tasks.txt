@@ -1,4 +1,25 @@
-# Build-ins. "Zipped!"
+# Built-ins. "Any or all"
+
+if __name__ == '__main__':
+    size = int(input())
+    nums = input().split()
+    if size == len(nums):
+        if all([int(i) > 0 for i in nums]):
+            if any([i == i[::-1] for i in nums]):
+                print('True')
+            else:
+                print('False')
+        else:
+            print('False')
+
+# Built-ins. "Python Evaluation"
+
+if __name__ == '__main__':
+    s = input()
+
+    print(eval(s[6: len(s) - 1]))
+
+# Built-ins. "Zipped!"
 
 if __name__ == '__main__':
     num_stud, *sbj = input().split()
@@ -11,3 +32,19 @@ if __name__ == '__main__':
     for i in average_mark:
         summary = sum(map(float, i))
         print(summary/sbj)
+
+
+# Built-ins. "Input()"
+
+if __name__ == '__main__':
+    x, *k = input().split()
+    x = int(x)
+    k = int(k[0])
+
+    exp = eval(input())
+
+    print(exp)
+    if exp == k:
+        print('True')
+    else:
+        print('False') 

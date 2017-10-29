@@ -64,39 +64,39 @@ if __name__ == '__main__':
 
 import random
 
-def generator(num):
+
+def create_nums(num):
     i = 1
     while i < num + 1:
         yield i
         i += 1
 
+
 if __name__ == '__main__':
-    f1 = open(r'numbers1', 'w+')
-    f2 = open(r'numbers2', 'w+')
 
-    lst1 = [i for i in generator(100)]
-    random.shuffle(lst1)
-    
-    i = 0
-    while i != 50:
-        ran_num = str(lst1[i])
-        f1.write(ran_num + ',')
-        i += 1
+    with open(r'numbers1', 'w') as f:
+        lst1 = [i for i in create_nums(100)]
+        random.shuffle(lst1)
 
-    lst2 = [i for i in generator(100)]
-    random.shuffle(lst2)
-    
-    i = 0
-    while i != 50:
-        ran_num = str(lst2[i])
-        f2.write(ran_num + ',')
-        i += 1
+        for i in range(len(lst1)//2):
+            ran_num = str(lst1[i])
+            f.write(ran_num + ',')
+
+    with open(r'numbers2', 'w') as f:
+        lst2 = [i for i in create_nums(100)]
+        random.shuffle(lst2)
+
+        for i in range(len(lst2)//2):
+            ran_num = str(lst2[i])
+            f.write(ran_num + ',')
 
     f2 = open(r'numbers2')
-    s2 = set(f2.read().split(','))    
+    s2 = set(f2.read().split(','))
+    f2.close()
 
     f1 = open(r'numbers1')
     s1 = set(f1.read().split(','))
+    f1.close()
 
     print('In first file and second one: ', s1 & s2)
     print('In first file without repeat: ', s1)

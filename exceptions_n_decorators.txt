@@ -1,0 +1,23 @@
+# Errors and Exceptions. 'Exceptions'
+
+if __name__ == '__main__':
+    for _ in range(int(input())):
+        a, *b = input().split()
+
+        try:
+            print(int(a)//int(b[0]))
+        except (ZeroDivisionError, ValueError) as e:
+            print('Error code:', e)
+
+# Error and Exceptions. 'Incorrect regex'
+
+import re
+
+if __name__ == '__main__':
+    for _ in range(int(input())):
+        try:
+            re.compile(input())
+            print('True')
+        except re.error:
+            print('False')
+

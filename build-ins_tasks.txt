@@ -43,7 +43,6 @@ if __name__ == '__main__':
 
     exp = eval(input())
 
-    print(exp)
     if exp == k:
         print('True')
     else:

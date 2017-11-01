@@ -53,7 +53,7 @@ if __name__ == '__main__':
     n = int(input())
     arr = map(int, input().split())
     set1 = set(arr)
-    print(sorted(set1)[len(set1)-2])
+    print(sorted(set1)[-2])
 
 # The sixth one
 # I've fixed this code too, now it's simplier

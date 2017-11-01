@@ -19,6 +19,16 @@ if __name__ == '__main__':
 
     print(eval(s[6: len(s) - 1]))
 
+# Built-ins. "Python Evaluation"
+# The first method was right, but this one just for sum of all numbers in string
+import re
+
+if __name__ == '__main__':
+    s = input()
+    nums = re.findall(r'\d', s)
+    print(sum(map(int, nums)))
+
+
 # Built-ins. "Zipped!"
 
 if __name__ == '__main__':

@@ -1,0 +1,15 @@
+# Python functionals. "Map and lambda Function"
+# I've gathered this functions in one beautiiful code))
+
+def fibo(n):
+    a = 1
+    b = 0
+    for i in range(n):
+        a, b = b, a + b
+        yield a
+
+
+if __name__ == '__main__':
+    n = int(input())
+    cube = list(map(lambda x: x**3, fibo(n)))
+    print(cube)

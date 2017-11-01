@@ -21,3 +21,32 @@ if __name__ == '__main__':
         except re.error:
             print('False')
 
+# Clousers and Decorators
+# Maybe it's hardcore, but i don't know how else can i do this task
+
+def wrapper(f):
+    def fun(l):
+        a = '+91'
+        l1 = []
+        for i in l:
+            if len(i) == 10:
+                l1.append(' '.join([a, i[:5], i[5:]]))
+            if i.startswith('0') and len(i) == 11:
+                l1.append(' '.join([a, i[1:6], i[6:]]))
+            if i.startswith('91') and len(i) == 12:
+                l1.append(' '.join([a, i[2:7], i[7:]]))
+            if i.startswith('+91') and len(i) == 13:
+                l1.append(' '.join([a, i[3:8], i[8:]]))
+        f(l1)
+
+    return fun
+
+
+@wrapper
+def sort_phone(l):
+    print(*sorted(l), sep='\n')
+
+
+if __name__ == '__main__':
+    l = [input() for _ in range(int(input()))]
+    sort_phone(l)

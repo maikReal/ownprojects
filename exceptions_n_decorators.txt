@@ -51,7 +51,6 @@ if __name__ == '__main__':
     l = [input() for _ in range(int(input()))]
     sort_phone(l)
 
-<<<<<<< HEAD
 
 # Clousers and Decorators. "Decorators 2 - Name Directory"
 # I did it!!!!
@@ -64,20 +63,6 @@ def person_lister(f):
         val = list(map(lambda x: x[1], people))
         print(val)
         return list(map(f, val))
-=======
-# Clousers and Decorators. "Decorators 2 - Name Directory"
-# i don't know why sorted() in one case the sorting is normal and all numbers is right,
-# but in other the sorting is wrong (the last three tests on hackerrank were fail) 
-
-from operator import itemgetter
-
-
-def person_lister(f):
-    def inner(people):
-        people = sorted(list(map(tuple, people)), key=itemgetter(2))
-        return list(map(f, people))
->>>>>>> 3eb5cbce01c64c0f35030a671a4676c713ff9ed4
-    return inner
 
 
 @person_lister
@@ -88,10 +73,4 @@ def name_format(person):
 if __name__ == '__main__':
     people = [input().split() for i in range(int(input()))]
     print(*name_format(people), sep='\n')
-<<<<<<< HEAD
-=======
 
-
-
-
->>>>>>> 3eb5cbce01c64c0f35030a671a4676c713ff9ed4

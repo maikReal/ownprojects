@@ -50,3 +50,27 @@ def sort_phone(l):
 if __name__ == '__main__':
     l = [input() for _ in range(int(input()))]
     sort_phone(l)
+
+
+# Clousers and Decorators. "Decorators 2 - Name Directory"
+# I did it!!!!
+
+def person_lister(f):
+    def inner(people):
+        my_dict = {(i[0], i[2]): i for i in people}
+        print(my_dict)
+        people = sorted(my_dict.items(), key=lambda x: x[0][1])
+        val = list(map(lambda x: x[1], people))
+        print(val)
+        return list(map(f, val))
+    return inner
+
+
+@person_lister
+def name_format(person):
+    return ("Mr. " if person[3] == "M" else "Ms. ") + person[0] + " " + person[1]
+
+
+if __name__ == '__main__':
+    people = [input().split() for i in range(int(input()))]
+    print(*name_format(people), sep='\n')

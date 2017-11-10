@@ -1,0 +1,27 @@
+# Task ¹2 from file
+
+class Aeroflot:
+    def __init__(self, name_of_arrival, type_of_plane):
+        self.name_of_arrival = name_of_arrival
+        self.type_of_plane = type_of_plane
+
+    def numbers_of_voyager(self, number_of_voyage):
+        self.number_of_voyage = number_of_voyage
+
+    def sort_voyagers(self):
+        return ('Sorted voyagers : '
+                + str(sorted(self.number_of_voyage)))
+
+    def print_all(self, input_place):
+        if self.name_of_arrival == input_place:
+            print('Voyagers %s and type of plane %s, '
+                  'fly out to %s' % (self.number_of_voyage, self.type_of_plane, self.name_of_arrival))
+
+
+if __name__ == '__main__':
+    p1 = Aeroflot('Boston', 'Airbus')
+    voyagers = input('Input number of voyagers: ').split()
+    p1.numbers_of_voyager(['7', '12D', '15E', '220A'])
+    input_plane = input('Input place of arrival: ')
+    p1.print_all(input_plane)
+    print(p1.sort_voyagers())

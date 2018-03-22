@@ -1,5 +1,6 @@
 """"
-Scrapper of the air company 'POBEDA'
+Scrapper of the air company 'POBEDA'.
+Version 0.1.
 
 Useful info:
 For the beginning of the program indicate 2 places

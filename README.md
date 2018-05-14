@@ -1,3 +1,5 @@
-# tests_excersises
+# Welcome to my repo!
 
-This repo contains test files.
+Hello, fellow!
+Here you can find examples of my works in various spheres: machine learning, web development, game development.
+Have fun!

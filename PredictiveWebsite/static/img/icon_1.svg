@@ -1,0 +1,18 @@
+<svg width="240" height="240" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>icon</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-572 -1866)">
+<g id="icon">
+<g id="Group">
+<g id="steering x5F wheel">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(572 1866)" fill="#030104" fill-opacity="0.7"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 120 0C 53.73 0 0 53.73 0 120C 0 186.27 53.73 240 120 240C 186.27 240 240 186.27 240 120C 240 53.73 186.27 0 120 0ZM 120 30C 159.053 30 192.038 55.155 204.495 90L 35.505 90C 47.9625 55.155 80.9475 30 120 30ZM 120 135C 111.713 135 105 128.288 105 120C 105 111.713 111.713 105 120 105C 128.288 105 135 111.713 135 120C 135 128.288 128.288 135 120 135ZM 30 120C 70.9875 120 104.183 159.495 104.88 208.478C 62.46 201.21 30 164.445 30 120ZM 135.12 208.478C 135.818 159.495 169.012 120 210 120C 210 164.445 177.54 201.21 135.12 208.478Z"/>
+</defs>
+</svg>

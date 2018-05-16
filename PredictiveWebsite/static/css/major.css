@@ -1,0 +1,463 @@
+/* fonts */ 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+font{
+    font-family: 'Montserrat'
+}
+
+.start1-page {
+    height: 50vh;
+    background-color: #f5f5f5;
+}
+
+.left-text {
+    position:relative;
+    width: 652px;
+    height: 243px;
+    padding-left: 106px;
+    padding-top: 59px;
+    padding-right: 47px;
+    background-color: #50A4FF;
+    border-top-right-radius : 20px;
+    border-bottom-right-radius : 20px;
+}
+
+.strat2-page {
+    height: 50vh;
+    background-color: #f5f5f5;
+}
+
+.left-text-font {
+    font-size:  34px;
+    color: #FFFFFF;
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+}    
+
+.left-image {
+    padding-left: 80px;
+    padding-bottom: 60px
+}
+
+.bottom-layer {
+    padding-bottom: 40px;
+    
+}
+
+img {
+    display:block;
+    height: auto;
+    width: 100%
+}
+.second-part {
+    height: 125vh;
+    padding-top: 50px;
+    margin-right: 80px
+}
+
+$grid-gutter-width: 20px !default;
+.title {
+    
+}
+
+.forms {
+    height: auto;
+    background-color: #f5f5f5;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+
+.number-text {
+    font-size: 5em
+}
+
+.rigth-part {
+    font-size: 2em;
+    padding-left: 60px
+}
+
+/* forms */
+/*
+* field
+*/
+
+/* reset */
+
+.field{
+  --uiFieldPaddingTop: var(--fieldPaddingTop, 0px);
+  --uiFieldPaddingRight: var(--fieldPaddingRight, 0px);
+  --uiFieldPaddingBottom: var(--fieldPaddingBottom, 0px);
+  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 0px);
+
+  --uiFieldBorderColor: var(--fieldBorderColor, transpatent);
+  --uiFieldBorderTop: var(--fieldBorderTop, 0px);
+  --uiFieldBorderRight: var(--fieldBorderRight, 0px);
+  --uiFieldBorderBottom: var(--fieldBorderBottom, 0px);
+  --uiFieldBorderLeft: var(--fieldBorderLeft, 0px);
+
+  --uiFieldBgColor: var(--fieldBgColor, transpatent);
+  --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
+  --uiFieldAnimationDuration: var(--fieldAnimationDuration, .3s);
+  --uiFieldFonstSize: var(--fieldFontSize, 16px);
+
+  position: relative;  
+  display: block;
+}
+
+.field__input{
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--uiFieldBgColor);
+
+  /* for iOS */
+  appearance: none;
+  border-radius: 0;
+
+  border-style: solid;
+  border-color: var(--uiFieldBorderColor);
+
+  border-top-width: var(--uiFieldBorderTop);
+  border-right-width: var(--uiFieldBorderRight);
+  border-bottom-width: var(--uiFieldBorderBottom);
+  border-left-width: var(--uiFieldBorderLeft);
+
+  padding-top: var(--uiFieldPaddingTop);
+  padding-right: var(--uiFieldPaddingRight);
+  padding-bottom: var(--uiFieldPaddingBottom);
+  padding-left: var(--uiFieldPaddingLeft);
+
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+}
+
+.field__input::-webkit-input-placeholder{ 
+  color: var(--uiFieldPlaceholderColor);
+  opacity: 0;
+}
+
+.field__input::-moz-placeholder{ 
+  color: var(--uiFieldPlaceholderColor);
+  opacity: 0;
+}
+
+.field__input:focus{
+  outline: none;  
+}
+
+.field__input:focus::-webkit-input-placeholder{ 
+  transition: opacity var(--uiFieldAnimationDuration) ease-out var(--uiFieldAnimationDuration);
+  opacity: 1;
+}
+
+.field__input:focus::-moz-placeholder{ 
+  transition: opacity var(--uiFieldAnimationDuration) ease-out var(--uiFieldAnimationDuration);
+  opacity: 1;
+}
+
+.field__label-wrap{
+  height: 100%;
+  display: block;
+}
+
+.field__label{
+  position: absolute;
+  top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop));
+  left: calc(0px + var(--uiFieldPaddingLeft) + var(--uiFieldBorderLeft));
+
+  pointer-events: none;
+  font-size: .9em;
+
+  transition: top var(--uiFieldAnimationDuration) cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-out;
+  will-change: top, opacity;
+}
+
+.field__input:not(:placeholder-shown) ~ .field__label-wrap .field__label{
+  opacity: 0;
+  top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop));
+}
+
+.field__input:focus ~ .field__label-wrap .field__label{
+  opacity: 1;
+  top: calc(-1 * calc(var(--uiFieldPaddingTop) + var(--uiFieldBorderTop) + 15px));
+}
+
+/* type1 */
+
+.field_type1{
+  --uiFieldPaddingTop: var(--fieldPaddingTop, 15px);
+  --uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
+  --uiFieldPaddingBottom: var(--fieldPaddingBottom, 15px);
+  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);
+
+  --uiFieldBorderTop: var(--fieldBorderTop, 2px);
+  --uiFieldBorderRight: var(--fieldBorderRight, 2px);
+  --uiFieldBorderBottom: var(--fieldBorderBottom, 2px);
+  --uiFieldBorderLeft: var(--fieldBorderLeft, 2px);  
+}
+
+.field_type1 .field__input{  
+  transition: border-color var(--uiFieldAnimationDuration) ease-out;
+  will-change: border-color;
+}
+
+.field_type1 .field__input:focus{
+  --uiFieldBorderColor: var(--fieldBorderColorActive);
+}
+
+/* type 2 */
+
+.field_type2{
+  --uiFieldBorderBottom: var(--fieldBorderBottom, 2px);
+  --uiFieldPaddingTop: var(--fieldPaddingTop, 5px);
+  --uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
+  --uiFieldPaddingBottom: var(--fieldPaddingBottom, 10px);
+  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);  
+}
+
+.field_type2 .field__label-wrap:after{
+  content: "";
+  width: 0;
+  height: var(--uiFieldBorderBottom);
+  background-color: var(--fieldBorderColorActive);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  will-change: width;
+  transition: width var(--uiFieldAnimationDuration) ease-out;
+}
+
+.field_type2 .field__input:focus ~ .field__label-wrap:after{
+  width: 100%;
+}
+
+
+/*
+* demo styles
+*/
+
+.field{
+  --fieldBorderColor: rgba(80, 164, 255, 0.15);
+  --fieldBorderColorActive: rgba(80, 164, 255, 0.45);
+  --fieldPlaceholderColor: #000000;
+  color: #000000;
+}
+
+/*
+* demo page
+*/
+
+@media screen and (min-width: 768px){
+
+  html{
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (max-width: 767px){
+
+  html{
+    font-size: 50%;
+  }
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", 'Montserrat', "Ubuntu", "Fira Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;   
+  overflow-y: scroll;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover, a:focus{
+  text-decoration: underline;
+}
+
+.page{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.page__demo{
+  flex-grow: 2;
+  display: flex;
+}
+
+.main-container{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.page__container{
+  width: 80%;  
+  max-width: 600px;
+  
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+  margin: auto;  
+}
+
+.page__section:not(:first-child){
+  margin-top: 7rem;
+}
+
+
+/* end forms */
+.img-car {
+    width: 375px;
+    height: 119px
+}
+
+.but {
+    background: #50A4FF;
+    width: 243px;
+    height: 70px;
+    border-radius: 20px;
+    font-size: 26px;
+    font-family: 'Montserrat'
+}
+
+.vec1 {
+    width: 53px;
+    height: 76px;
+    transform: rotate(-10.58deg);
+    margin-top: 60px;
+    margin-left: 370px;
+    
+}
+
+.right-part {
+    height: auto;
+    padding-left: 140px;
+    padding-top: 120px
+}
+
+.vec2 {
+    width: 26.59px;
+    height: 29.71px;
+    margin-top: 250px;
+    margin-left:160px;
+}
+
+.vec3 {
+    width: 56.04px;
+    height: 81.27px;
+    margin-left: 115px;
+    margin-bottom: 100px;
+    
+}
+
+.vec4 {
+    width: 55.54px;
+    height: 59.33px;
+}
+
+.img-right {
+    width: 500px;
+    height: auto;
+}
+
+
+
+.boxes {
+    font-family: 'Montserrat';
+    font-size: 26px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.nums-boxes {
+    font-family: 'Montserrat';
+    color: rgba(80, 164, 255, 0.35);
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 92px;
+    text-align: center;
+}
+
+.galka {
+    width: 42px;
+    height: 30px;
+}
+
+.box-footer {
+    padding-top: 10px;
+    padding-bottom: 12px;
+    padding-left: 38px
+}
+
+.forms-car {
+    
+    margin-left: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.footer-car {
+    margin-left: 15px;
+    margin-top: 24px
+}
+
+.text-sec {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 34px;
+    color: #000000;
+    margin-left: 20px;
+    
+}
+
+.upper {
+    margin-top: 40px
+}
+
+.fire {
+    width: 52px;
+}
+
+.but-footer {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 26px;
+    text-align: center;
+    background: #50A4FF;
+    width: 243px;
+    height: 70px;
+    border-radius: 20px;
+    font-size: 26px;
+    font-family: 'Montserrat';
+    margin-top: 20px
+}
+
+
+
+.forms-8 {
+    height: auto;
+    background-color: #f5f5f5;
+    margin-left:34px;
+    margin-bottom: 20px;
+    margin-right: 49px
+}
+

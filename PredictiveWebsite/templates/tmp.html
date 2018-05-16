@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/major.css">
+
+    <link rel="shortcut icon" href="/static/img/little_car.png" type="image/x-icon">
+
+    <title>Predict Your Car</title>
+</head>
+<body>
+    <div class="container-fluid ">
+        <div class="row start1-page ">
+
+            <div class="col-md-5 col-xs-12 align-self-center left-text">
+            <font class="left-text-font">Предсказываем цену на автомобиль по вашим  критериям.</font>
+            </div>
+            <div class="col-md-7 col-xs-12 align-self-center right-part">
+
+                <img src="/static/img/rigth-part.png" alt="" class="img-right">
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row strat2-page">
+            <div class="col-md-5 col-xs-12 align-self-center left-image">
+                <img src="/static/img/Group_1.svg" alt="ooops" class="img-responsive img-car">
+            </div>
+            <div class="col-md-7 col-xs-0">
+            </div>
+            <div class="col-md-12 col-xs-12 bottom-layer text-center">
+            <button class="btn btn-primary btn-lg but">Предсказать</button>
+            </div>
+            <div class="col-md-12 text-center">
+                <!--<input type="textarea" class="output">-->
+                    <font  style="color: #000000; font-family: 'Montserrat'; font-size: 40px; margin-top: 20px;">{{ price }}</font>
+
+
+    </div>
+        </div>
+
+    </div>
+
+    <!-- second part -->
+    <form action="/form_checking" method='GET' >
+    <div class="container second-part">
+        <div class="row title">
+            <div class="col-md-15 col-xs-12 text-left">
+            <font class="text-sec">Давайте, предскажем</font>
+            </div>
+            <div class="col-md-1 col-xs-12">
+            <img src="/static/img/fire.png" alt="oops" class="fire img-responsive">
+            </div>
+
+
+
+            <div class="w-100 upper"></div>
+
+            <div class="col col-xs-12 forms">
+               <div class="row align-items-center">
+                   <div class="col-md-2 number-text text-center"><font class="nums-boxes">01</font></div>
+                   <div class="col-md-10 text-center rigth-part"><font class="boxes">Год автомобиля</font></div>
+                   <div class="col-12">
+                       <div class="main-container page__container">
+                           <div class="page__section">
+                            <label class="field field_type2">
+                              <input class="field__input" placeholder="Год" type="text" name="form1">
+                              <span class="field__label-wrap">
+                                <span class="field__label"></span>
+                              </span>
+                            </label>
+                           </div>
+                       </div>
+
+
+
+                   </div>
+
+
+               </div>
+
+            </div>
+
+
+            <div class="col col-xs-12 forms">
+
+                <div class="row align-items-center">
+                   <div class="col-md-2 number-text text-center"><font class="nums-boxes">02</font></div>
+                   <div class="col-md-10 text-center rigth-part"><font class="boxes">Пробег</font></div>
+                   <div class="col-12">
+                       <div class="main-container page__container">
+                          <form action="">
+                           <div class="page__section">
+                            <label class="field field_type2">
+                              <input class="field__input" placeholder="Пробег" name="form2">
+                              <span class="field__label-wrap">
+                                <span class="field__label"></span>
+                              </span>
+                            </label>
+                           </div>
+                          </form>
+                       </div>
+
+
+
+                   </div>
+
+
+               </div>
+
+
+            </div>
+
+
+
+            <div class="col col-xs-12 forms">
+
+                <div class="row align-items-center">
+                   <div class="col-md-2 number-text text-center"><font class="nums-boxes">03</font></div>
+                   <div class="col-md-10 text-center rigth-part"><font class="boxes">Тип автомобиля</font></div>
+                   <div class="col-12">
+                       <div class="main-container page__container">
+                           <div class="page__section">
+                            <label class="field field_type2">
+                              <input class="field__input" placeholder="Тип" name="form3">
+                              <span class="field__label-wrap">
+                                <span class="field__label"></span>
+                              </span>
+                            </label>
+                           </div>
+                       </div>
+
+
+
+                   </div>
+
+
+               </div>
+
+
+            </div>
+
+            <div class="w-100"></div>
+
+            <div class="col col-xs-12 forms">
+
+                <div class="row align-items-center">
+                   <div class="col-md-2 number-text text-center"><font class="nums-boxes">04</font></div>
+                   <div class="col-md-10 text-center rigth-part"><font class="boxes">Двигатель</font></div>
+                   <div class="col-12">
+                       <div class="main-container page__container">
+                           <div class="page__section">
+                            <label class="field field_type2">
+                              <input class="field__input" placeholder="Объем" name="form4">
+                              <span class="field__label-wrap">
+                                <span class="field__label"></span>
+                              </span>
+                            </label>
+                           </div>
+                       </div>
+
+
+
+                   </div>
+
+
+               </div>
+
+            </div>
+
+
+
+            <div class="col col-xs-12 forms">
+
+                <div class="row align-items-center">
+                   <div class="col-md-2 number-text text-center"><font class="nums-boxes">05</font></div>
+                   <div class="col-md-10 text-center rigth-part"><font class="boxes">Коробка</font></div>
+                   <div class="col-12">
+                       <div class="main-container page__container">
+                           <div class="page__section">
+                            <label class="field field_type2">
+                              <input class="field__input" placeholder="Коробка" name="form5">
+                              <span class="field__label-wrap">
+                                <span class="field__label"></span>
+                              </span>
+                            </label>
+                           </div>
+                       </div>
+
+
+
+                   </div>
+
+
+               </div>
+
+            </div>
+
+
+
+            <div class="col col-xs-12 forms">
+
+                <div class="row align-items-center">
+                   <div class="col-md-2 number-text text-center"><font class="nums-boxes">06</font></div>
+                   <div class="col-md-10 text-center rigth-part"><font class="boxes">Топливо</font></div>
+                   <div class="col-12">
+                       <div class="main-container page__container">
+                           <div class="page__section">
+                            <label class="field field_type2">
+                              <input class="field__input" placeholder="Топливо" name="form6">
+                              <span class="field__label-wrap">
+                                <span class="field__label"></span>
+                              </span>
+                            </label>
+                           </div>
+                       </div>
+
+
+
+                   </div>
+
+               </div>
+
+            </div>
+            <div class="w-100"></div>
+            <div class="col col-xs-12 forms">
+
+                <div class="row align-items-center">
+                   <div class="col-md-2 number-text text-center"><font class="nums-boxes">07</font></div>
+                   <div class="col-md-10 text-center rigth-part"><font class="boxes">Привод</font></div>
+                   <div class="col-12">
+                       <div class="main-container page__container">
+                           <div class="page__section">
+                            <label class="field field_type2">
+                              <input class="field__input" placeholder="Привод" name="form7">
+                              <span class="field__label-wrap">
+                                <span class="field__label"></span>
+                              </span>
+                            </label>
+                           </div>
+                       </div>
+
+
+
+                   </div>
+
+
+               </div>
+
+            </div>
+
+            <div class="col col-xs-12 forms">
+
+                <div class="row align-items-center">
+                   <div class="col-md-2 number-text text-center"><font class="nums-boxes">08</font></div>
+                   <div class="col-md-10 text-center rigth-part"><font class="boxes">Мощность двигателя</font></div>
+                   <div class="col-12">
+                       <div class="main-container page__container">
+                           <div class="page__section">
+                            <label class="field field_type2">
+                              <input class="field__input" placeholder="Мощность" name="form8">
+                              <span class="field__label-wrap">
+                                <span class="field__label"></span>
+                              </span>
+                            </label>
+                           </div>
+                       </div>
+
+
+
+                   </div>
+
+
+               </div>
+
+            </div>
+            <div class="col col-xs-12 forms-car">
+
+                <img src="/static/img/car.svg" alt="oops" class="footer-car">
+
+            </div>
+            <div class="w-100"></div>
+            <div class="col-md-12 text-center">
+                <input class="btn btn-primary btn-lg but-footer" type='submit' value='Результат' name="button1">
+
+            </div>
+
+
+        </div>
+    </div>
+    </form>
+
+
+
+
+
+    <script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>

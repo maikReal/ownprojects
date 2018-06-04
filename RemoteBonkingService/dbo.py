@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def data_processing(data):
     services = []
     for i in data['Услуги']:
@@ -50,7 +49,8 @@ def choose_bank(data, services, security, price, support):
                 else:
                     if price <= row['Цена']:
                         rec_banks.append(row['Название банка'])
-    return rec_banks
+
+    return ', '.join(rec_banks)
 
 
 def main():
@@ -78,12 +78,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
 

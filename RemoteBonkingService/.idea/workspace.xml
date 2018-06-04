@@ -14,8 +14,8 @@
       <file leaf-file-name="dbo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dbo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="116">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
             </state>
           </provider>
         </entry>
@@ -45,8 +45,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="dbo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dbo" type="462c0819:PsiDirectoryNode" />
+              <item name="RemoteBonkingService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RemoteBonkingService" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -110,11 +110,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="43" width="1260" height="666" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3293919" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.50079364" side_tool="true" visible="true" weight="0.3293919" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920633" weight="0.3293919" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -141,6 +142,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dbo.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbo.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" lean-forward="true" selection-start-column="19" selection-end-line="1" />
         </state>
@@ -155,8 +163,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dbo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="116">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>

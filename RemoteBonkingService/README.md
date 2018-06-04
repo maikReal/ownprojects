@@ -5,5 +5,6 @@ In this folder are represented file for `Remote Banking Service` (DBO in Russian
 
 # Files
 
-1. `dbo.py` - file with logic and interface for application
+1. `dbo.py` - file with logic of application
 2. `.xlsx` - files with information on legal entities and individuals 
+3. `interface.py` and `main.py` - files with interface of application

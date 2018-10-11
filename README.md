@@ -1,5 +1,3 @@
-# Welcome to my repo!
+# University projects
 
-Hello, fellow!
-Here you can find examples of my works in various spheres: machine learning, web development, game development.
-Have fun!
+This repository represents my own projects in different spheres: from developing on Python to data analysis with using of machine learning. If you have some questions, write me on email: `imaikal13998@gmail.com`
